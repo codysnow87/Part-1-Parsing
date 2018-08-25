@@ -3,7 +3,7 @@
  * REVISION HISTORY (newest first)
  **********************************************************************
  *
- * 8/22/2018 - Cody Snow filled out methods, conducted testing 
+ * 8/22/2018 - Cody Snow filled out methods, conducted testing
  * 2018 - Cody Snow and Jacob McIntire completed this class for CSCI 290
  * 2016 - Anne Applin - formatting and JavaDoc skeletons added
  * 2015 - Prof. Bob Boothe - Starting code and main for testing

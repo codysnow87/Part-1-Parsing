@@ -4,8 +4,10 @@ package student;
  * REVISION HISTORY (newest first)
  **********************************************************************
  *
- * 
- * 8/22/2018 - Cody Snow worked on SongCollection method
+ * 8/25/2018 - codyssnow - more work on reading in file, setting up variables, 
+ * arrayList object created. 
+ * 8/24/2018 - codyssnow - got try/catch block working for reading in file
+ * 8/22/2018 - codyssnow - initial work building SongCollection method
  * 2018 - Cody Snow and Jacob McIntire completed this class for CSCI 290
  * 2016 - Anne Applin - formatting and JavaDoc skeletons added   
  * 2015 - Prof. Bob Boothe - Starting code and main for testing  
@@ -49,13 +51,28 @@ public class SongCollection {
         
         // sort the songs array using Array.sort (see the Java API)
         
+        // create/initialize songList object
+        ArrayList<Song> songList = new ArrayList<>();
+        
         Scanner inputFile = null;
         try {
             inputFile = new Scanner(new File(filename));
             while (inputFile.hasNext()) {
-               // read stuff
-              
-               // add song to songs array
+                // use Strings to read in file
+                String artist; 
+                String title;
+                String lyrics;
+                StringBuilder lyricBuilder = new StringBuilder();
+                
+                // read stuff one line at a time
+                // will need to use a logical test for the presence of " marks
+                
+                
+                // build new Song object with song information
+                Song s = new Song(artist, title, lyrics);
+                
+                // add song object to arrayList
+                songList.add(s);
             }
             inputFile.close();
         } catch (InputMismatchException e) {
@@ -68,7 +85,11 @@ public class SongCollection {
                     + " data file or the keyboard input.");
             System.out.println(e);
             e.printStackTrace();
-        }        
+        }   
+        
+        // populate songs with Song objects from songArray using toArray
+        songs = new Song[songList.size()];
+        
     }
  
     /**
